@@ -21,7 +21,7 @@ export default {
 
 <template>
 
-        <h3>Card</h3>
+        <h1>Projects</h1>
 
         <div class="card-cont">
             
@@ -38,11 +38,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
-h3 {
-    text-align: center;
-    padding: 40px;
-}
 
 .card-cont {
     display: flex;

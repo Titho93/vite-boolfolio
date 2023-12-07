@@ -3,12 +3,14 @@
 import axios from 'axios';
 import {store} from './data/store';
 import Projects from './components/Projects.vue';
+import Header from './components/partials/Header.vue';
 
 
 export default {
   name: 'App',
   components: {
-    Projects
+    Projects,
+    Header
   },
   data(){
     return {
@@ -32,6 +34,7 @@ export default {
 </script>
 
 <template>
+  <Header />
  <div class="container">
   <RouterView />
  </div>
