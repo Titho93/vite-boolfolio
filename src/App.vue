@@ -4,6 +4,7 @@ import axios from 'axios';
 import {store} from './data/store';
 import Projects from './components/Projects.vue';
 
+
 export default {
   name: 'App',
   components: {
@@ -11,7 +12,6 @@ export default {
   },
   data(){
     return {
-      title: 'Api List',
       store
     }
   },
@@ -33,8 +33,7 @@ export default {
 
 <template>
  <div class="container">
-  <h1>{{ title }}</h1>
-  <Projects />
+  <RouterView />
  </div>
 </template>
 
