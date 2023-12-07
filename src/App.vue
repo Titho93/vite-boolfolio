@@ -2,12 +2,12 @@
 
 import axios from 'axios';
 import {store} from './data/store';
-import ProjectCard from './components/ProjectCard.vue';
+import Projects from './components/Projects.vue';
 
 export default {
   name: 'App',
   components: {
-    ProjectCard
+    Projects
   },
   data(){
     return {
@@ -34,7 +34,7 @@ export default {
 <template>
  <div class="container">
   <h1>{{ title }}</h1>
-  <ProjectCard />
+  <Projects />
  </div>
 </template>
 

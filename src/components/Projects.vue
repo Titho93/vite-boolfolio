@@ -4,7 +4,7 @@ import { store } from '../data/store';
 import Card from './partials/Card.vue';
 
 export default {
-    name: 'ProjectCard',
+    name: 'Projects',
     components: {
         Card
     },
