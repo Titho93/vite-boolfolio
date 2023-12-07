@@ -4,6 +4,7 @@ import Home from "./components/Home.vue";
 import About from "./components/About.vue";
 import Projects from "./components/Projects.vue";
 import Contacts from "./components/Contacts.vue";
+import Error404 from "./components/pages/Error404.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -28,6 +29,10 @@ const router = createRouter({
       path: "/contacts",
       name: "Contacts",
       component: Contacts,
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      component: Error404,
     },
   ],
 });
