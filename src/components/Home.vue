@@ -15,7 +15,7 @@ export default {
 <template>
 
     <h1>Home</h1>
-    <p>Welcome to my Project site</p>
+    <p>Welcome to my Projects site</p>
   
 </template>
 
@@ -24,6 +24,7 @@ export default {
 p {
     font-size: 40px;
     text-align: center;
+    color: yellow;
     
 }
 

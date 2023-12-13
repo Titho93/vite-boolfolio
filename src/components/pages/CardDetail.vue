@@ -48,12 +48,15 @@ export default {
     <Loader v-if="!isLoaded"/>
 
     <div v-else>
-        <h1>{{ project.name }}</h1>
-        <p>Type: {{ project.type?.name ?? ' - ' }} </p>
-        <p>Tecnology: {{ tecnologiesList }} </p>
-        <div>FOTO</div>
-        <p>{{ project.date }}</p>
-        <p> {{ project.description }}</p>
+        <h1>Detail</h1>
+        <div class="card-body">
+            <h5 class="card-title"><strong>Project Name:</strong> {{ project.name }}</h5>
+            <div class="image">FOTO</div>
+            <p class="card-text"><strong>Type:</strong> {{ project.type?.name ?? ' - ' }} </p>
+            <p class="card-text"><strong>Tecnology:</strong> {{ tecnologiesList }} </p>
+            <p class="card-text"><strong>Date:</strong> {{ project.date }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ project.description }}</p>
+        </div>
 
     </div>
 
@@ -62,10 +65,14 @@ export default {
 
 <style lang="scss" scoped>
 
-p {
-    font-size: 40px;
-    text-align: center;
-    
+.card-body{
+    color: yellow;
+    .image {
+        padding: 10px;
+    }
+    strong {
+        color: white;
+    }
 }
 
 </style>

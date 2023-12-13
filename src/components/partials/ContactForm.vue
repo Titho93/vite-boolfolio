@@ -58,7 +58,7 @@ export default {
         </div>
         <div>
             <label for="">Message</label>
-            <textarea v-model="message" name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea v-model="message" name="message" id="message" c></textarea>
             <p class="error" v-for="error in errors.message" :key="error">{{ error }}</p>
         </div>
         <div>
@@ -74,6 +74,7 @@ export default {
 p {
     font-size: 20px;
     text-align: center;
+    color: red;
     
 }
 

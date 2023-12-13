@@ -16,16 +16,16 @@ export default {
   <header>
     <ul class="nav nav-pills">
   <li class="nav-item">
-    <router-link :to="{name: 'home'}" class="btn btn-danger">Home</router-link>
+    <router-link :to="{name: 'home'}" class="btn ">Home</router-link>
   </li>
   <li class="nav-item">
-    <router-link :to="{name: 'about'}" class="btn btn-danger">About</router-link>
+    <router-link :to="{name: 'about'}" class="btn ">About</router-link>
   </li>
   <li class="nav-item">
-    <router-link :to="{name: 'projects'}" class="btn btn-danger">Projects</router-link>
+    <router-link :to="{name: 'projects'}" class="btn ">Projects</router-link>
   </li>
   <li class="nav-item">
-    <router-link :to="{name: 'contacts'}" class="btn btn-danger">Contacts</router-link>
+    <router-link :to="{name: 'contacts'}" class="btn ">Contacts</router-link>
   </li>
 </ul>
   </header>
@@ -38,6 +38,10 @@ header {
     background-color: rgba(13, 12, 12, 0.447);
     li {
         padding: 5px;
+    }
+
+    .btn {
+      color: yellow;
     }
 }
 
