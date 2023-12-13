@@ -16,16 +16,16 @@ export default {
   <header>
     <ul class="nav nav-pills">
   <li class="nav-item">
-    <router-link :to="{name: 'Home'}" class="btn btn-danger">Home</router-link>
+    <router-link :to="{name: 'home'}" class="btn btn-danger">Home</router-link>
   </li>
   <li class="nav-item">
-    <router-link :to="{name: 'About'}" class="btn btn-danger">About</router-link>
+    <router-link :to="{name: 'about'}" class="btn btn-danger">About</router-link>
   </li>
   <li class="nav-item">
-    <router-link :to="{name: 'Projects'}" class="btn btn-danger">Projects</router-link>
+    <router-link :to="{name: 'projects'}" class="btn btn-danger">Projects</router-link>
   </li>
   <li class="nav-item">
-    <router-link :to="{name: 'Contacts'}" class="btn btn-danger">Contacts</router-link>
+    <router-link :to="{name: 'contacts'}" class="btn btn-danger">Contacts</router-link>
   </li>
 </ul>
   </header>

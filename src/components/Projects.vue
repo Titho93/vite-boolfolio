@@ -1,20 +1,37 @@
 <script>
 
+import axios from 'axios';
 import { store } from '../data/store';
 import Card from './partials/Card.vue';
+import Loader from './partials/Loader.vue';
+import Navigator from './partials/Navigator.vue';
 
 export default {
     name: 'Projects',
     components: {
-        Card
+        Card,
+        Loader,
+        Navigator
     },
     data(){
         return{
-            store
+            store,
+            isLoaded: false,
+        }
+    },
+    methods:{
+        getApi(endpoint){
+            this.isLoaded = true;
+            axios.get(endpoint)
+                .then(results =>{
+                    console.log(endpoint);
+                store.projects = results.data;
+            })
         }
     },
     mounted(){
-        console.log(store.projectList);
+        this.getApi(store.apiUrl + 'projects');
+        console.log(store.projects);
     }
 }
 </script>
@@ -22,16 +39,12 @@ export default {
 <template>
 
         <h1>Projects</h1>
+        <Loader v-if="!isLoaded" />
 
-        <div class="card-cont">
-            
-            <Card v-for="card in store.projectList"
-            :key="card.id"
-            :name="card.name"
-            :date="card.date"
-            :description="card.description"
-            :image="card.image"
-            />
+        <div v-else class="card-cont">
+            <Card />
+            <Navigator 
+            @callApi="getApi"/>
         </div>
     
   
