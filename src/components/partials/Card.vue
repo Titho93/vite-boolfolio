@@ -26,6 +26,10 @@ export default {
 <style lang="scss">
 
 a {
+  color: white;
+}
+
+p {
   color: yellow;
 }
 
